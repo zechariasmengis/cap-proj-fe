@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import SignUpForm from './components/SignUpForm';
+import LogInForm from './components/LogInForm';
+import Home from './components/Home';
+import AllCardList from './components/AllCardList';
+import {Route} from 'react-router-dom';
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.token) {
+      fetch('http://localhost:3000/users', {
+        headers: {
+          Authorization: `Bearer ${localStorage.token}`
+        }
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.error) {
+            console.error(result.error);
+          } else {
+            handleLogin();
+          }
+        })
+    }
+  })
+
+  const handleLogin = () => setIsLoggedIn(true);
+  const handleLogout = () => setIsLoggedIn(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path="/" render={(routerProps) => <Home {...routerProps}/>} />
+      <Route path="/allcards" render={(routerProps) => <AllCardList {...routerProps}/>} />
+      <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} />} />
+      <Route path="/login" render={(routerProps) => <LogInForm {...routerProps} handleLogin={handleLogin} />} />
     </div>
   );
 }
