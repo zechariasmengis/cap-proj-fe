@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../css/SignUpForm.css'
-import {Link} from 'react-router-dom'
+import {Link, Redirect } from 'react-router-dom'
 
 function LogInForm(props) {
 
@@ -25,6 +25,7 @@ function LogInForm(props) {
             } else {
                 localStorage.setItem('token', result.token);
                 props.handleLogin();
+                props.history.push('/');
             }
         });
     };
@@ -38,28 +39,28 @@ function LogInForm(props) {
             </div>
             <form method="post" className="form" onSubmit={handleSubmit}>
         {/* ////////// USERNAME /////////// */}
-                    <label for="username">
-                        Username
-                    </label>
-                    <input 
-                        className='form-content'
-                        type='text' 
-                        name='username'
-                        value={username}
-                        onChange={(event) => setUsername(event.target.value)}
-                    />
-                    <div className="form-border"></div>
-        {/* ////////// PASSWORD /////////// */}
-                    <label for="password">Password
-                    </label>
-                    <input 
-                        className='form-content'
-                        type='password' 
-                        name='password'
-                        value={password}
-                        onChange={(event) => setPassword(event.target.value)}
-                    />
-                    <div className="form-border"></div>
+                <label for="username">
+                    Username
+                </label>
+                <input 
+                    className='form-content'
+                    type='text' 
+                    name='username'
+                    value={username}
+                    onChange={(event) => setUsername(event.target.value)}
+                />
+                <div className="form-border"></div>
+    {/* ////////// PASSWORD /////////// */}
+                <label for="password">Password
+                </label>
+                <input 
+                    className='form-content'
+                    type='password' 
+                    name='password'
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                />
+                <div className="form-border"></div>
 
                 <input className="submit-btn" type="submit" name="submit" value="Log In" />
                 <Link to="/signup" className="signup"> Create an account.</Link>

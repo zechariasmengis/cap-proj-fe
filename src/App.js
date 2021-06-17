@@ -5,6 +5,7 @@ import LogInForm from './components/LogInForm';
 import Home from './components/Home';
 import AllCardList from './components/AllCardList';
 import {Route} from 'react-router-dom';
+import NavBar from './components/NavBar'
 
 function App() {
 
@@ -33,6 +34,10 @@ function App() {
 
   return (
     <div className="App">
+      {isLoggedIn
+        ? <NavBar />
+        : null
+      }
       <Route exact path="/" render={(routerProps) => <Home {...routerProps}/>} />
       <Route path="/allcards" render={(routerProps) => <AllCardList {...routerProps}/>} />
       <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} />} />
