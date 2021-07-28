@@ -1,28 +1,23 @@
 import '../css/Card.css'
 
-function Card() {
+function Card({card}) {
     return(
         <main class="pokemon-card">
             <section class="title-row">
-                <p class="rarity">Basic Pokemon</p>
-                <h1 class="name">Charmander</h1>
+                <p class="rarity">Basic</p>
+                <h1 class="name">{card.name}</h1>
                 <p class="health">50 HP</p>
-                <img class="element-icon" src="./fire.png"/>
+                <img alt="element" class="element-icon" src="./fire.png"/>
             </section>
 
             <section class="character-img">
-                <img
+                <img alt="char"
                     src="https://static.wikia.nocookie.net/pokemon-and-digimon/images/6/63/Ash_Charmander.png/revision/latest?cb=20160113223827"/>
             </section>
 
-
-            {/* <section class="character-meta">
-                <p>Lizard Pokemon. Length: 2' 0", Weight: 19 lbs.</p>
-            </section> */}
-
             <section class="character-ability">
                 <span class="ability-cost">
-                    <img class="element-icon" src="./fire.png"/>
+                    <img alt ="icon" class="element-icon" src="./fire.png"/>
                 </span>
                 <span class="ability-description">
                     <span class="ability-name">Scratch</span>
@@ -65,8 +60,8 @@ function Card() {
             </section>
 
             <section class="card-details">
-                <p class="artist">LiLus. Mitsuhire Arita</p>
-                <p class="company">&copy;1995, 96, 96 Nintendo, Creatures, GAMEFREAK. &copy;1999 Wizards.</p>
+                {/* <p class="artist">LiLus. Mitsuhire Arita</p> */}
+                {/* <p class="company">&copy;1995, 96, 96</p> */}
                 <p class="collector-card-number">46/120</p>
             </section>
 		</main>

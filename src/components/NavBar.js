@@ -2,7 +2,7 @@ import '../css/NavBar.css'
 
 function NavBar() {
     return(
-        <div class="topnav">
+        <div className="topnav">
             <a href="#home">Home</a>
             <a href="#news">My Cards</a>
             <a href="#contact">Add Packs</a>

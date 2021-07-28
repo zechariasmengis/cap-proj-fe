@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../css/SignUpForm.css'
-import {Link, Redirect } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 function LogInForm(props) {
 

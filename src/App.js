@@ -6,6 +6,7 @@ import Home from './components/Home';
 import AllCardList from './components/AllCardList';
 import {Route} from 'react-router-dom';
 import NavBar from './components/NavBar'
+import OpenPack from './components/OpenPack'
 
 function App() {
 
@@ -27,10 +28,10 @@ function App() {
           }
         })
     }
-  })
+  }, [])
 
   const handleLogin = () => setIsLoggedIn(true);
-  const handleLogout = () => setIsLoggedIn(false);
+  // const handleLogout = () => setIsLoggedIn(false);
 
   return (
     <div className="App">
@@ -40,8 +41,10 @@ function App() {
       }
       <Route exact path="/" render={(routerProps) => <Home {...routerProps}/>} />
       <Route path="/allcards" render={(routerProps) => <AllCardList {...routerProps}/>} />
+      {/* <Route path="/mycards" render={(routerProps) => <MyCardList {...routerProps}/>} /> */}
       <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} />} />
       <Route path="/login" render={(routerProps) => <LogInForm {...routerProps} handleLogin={handleLogin} />} />
+      <Route exact path="/packs" render={(routerProps) => <OpenPack {...routerProps}/>} />
     </div>
   );
 }

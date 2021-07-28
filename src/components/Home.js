@@ -1,4 +1,4 @@
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 import Card from './Card'
 
 function Home() {
@@ -6,7 +6,7 @@ function Home() {
         <div>
             {/* <NavBar /> */}
             Yo
-            <Card />
+            
         </div>
     )
 }

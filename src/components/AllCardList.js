@@ -1,17 +1,27 @@
+import React, { useEffect, useState } from 'react'
+import Card from './Card.js'
+
 function AllCardList() {
 
-    const handleClick = () => {
-        fetch('http://localhost:3000/users', {
+    const [allCards, setAllCards] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/cards', {
             headers: {
                 Authorization: `Bearer ${localStorage.token}`
             }
         })
         .then(response => response.json())
-        .then(result => console.log(result))
-    };
+        .then(result => setAllCards(result));
+    }, [])
 
     return (
-        <button onClick={handleClick}> Get Users </button>
+        // Map over all cards and render a Card component for each
+        <div>
+            {allCards.map(card => {
+                return <Card card={card} />
+            })}
+        </div>
     )
 }
 
