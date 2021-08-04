@@ -21,23 +21,27 @@
   font-family: arial, sans-serif;
   box-shadow: 10px 8px 12px 0px black;
   position: relative;
+  background-color: #8EC5FC;
+  /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 
 .title-row {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "rarity rarity rarity"
- "name health type";
-  -ms-grid-columns: auto 75px 25px;
-      grid-template-columns: auto 60px 25px;
-  -ms-grid-rows: 15px 25px;
-      grid-template-rows: 15px 25px;
-  margin: 5px 20px 0px 20px;
+      grid-template-areas: "rarity rarity"
+ "name health";
+  -ms-grid-columns: auto 60px;
+      grid-template-columns: auto 60px;
+  -ms-grid-rows: 10px 25px;
+      grid-template-rows: 10px 25px;
+  margin: 0px 10px 0px 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
+  /* -webkit-column-gap: 5px;
+          column-gap: 5px; */
 }
 
 .title-row .rarity {
@@ -45,22 +49,20 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: rarity;
-  font-weight: bold;
-  font-size: 10px;
 }
 
 .title-row .name {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: name;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .title-row .health {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: health;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 15px;
   text-align: right;
   color: red;
@@ -74,14 +76,18 @@
 }
 
 .character-img {
-  margin: 0 28px 0 10px;
-  height: 120px;
+  margin: 0 10px 0 10px;
+  height: 135px;
   border: 5px solid yellow;
   overflow: hidden;
 }
 
 .character-img img {
   height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .character-meta {
@@ -103,7 +109,7 @@
 }
 
 .character-ability {
-  height: 75px;
+  height: 60px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 65px auto 65px;
@@ -149,7 +155,7 @@
   font-size: 20px;
 }
 
-.character-stats {
+/* .character-stats {
   height: 45px;
   display: -ms-grid;
   display: grid;
@@ -168,12 +174,12 @@
 .character-stats .character-stat p {
   font-size: 12px;
   font-weight: bold;
-}
+} */
 
 .character-description {
-  height: 40px;
-  width: 80%;
-  margin: 0 15px;
+  height: 50px;
+  width: 200px;
+  margin: 0 10px 0 10px;
   border: 2px solid yellow;
   display: -ms-grid;
   display: grid;

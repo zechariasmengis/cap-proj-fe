@@ -1,0 +1,8 @@
+.main-container {
+    display: flex;
+}
+
+.card-board {
+    display: flex;
+    min-height: 800px;
+}

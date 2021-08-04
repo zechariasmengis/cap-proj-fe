@@ -18,9 +18,9 @@ function AllCardList() {
     return (
         // Map over all cards and render a Card component for each
         <div>
-            {allCards.map(card => {
+            {/* {allCards.map(card => {
                 return <Card card={card} />
-            })}
+            })} */}
         </div>
     )
 }

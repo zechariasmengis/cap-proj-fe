@@ -2,27 +2,27 @@ import '../css/Card.css'
 
 function Card({card}) {
     return(
-        <main class="pokemon-card">
-            <section class="title-row">
-                <p class="rarity">Basic</p>
-                <h1 class="name">{card.name}</h1>
-                <p class="health">50 HP</p>
-                <img alt="element" class="element-icon" src="./fire.png"/>
+        <main className="pokemon-card">
+            <section className="title-row">
+                <p className="rarity">Basic</p>
+                <h1 className="name">{card.name}</h1>
+                <p className="health">50 HP</p>
+                <img alt="element" className="element-icon" src="./fire.png"/>
             </section>
 
-            <section class="character-img">
+            <section className="character-img">
                 <img alt="char"
                     src="https://static.wikia.nocookie.net/pokemon-and-digimon/images/6/63/Ash_Charmander.png/revision/latest?cb=20160113223827"/>
             </section>
 
-            <section class="character-ability">
-                <span class="ability-cost">
-                    <img alt ="icon" class="element-icon" src="./fire.png"/>
+            <section className="character-ability">
+                <span className="ability-cost">
+                    <img alt ="icon" className="element-icon" src="./fire.png"/>
                 </span>
-                <span class="ability-description">
-                    <span class="ability-name">Scratch</span>
+                <span className="ability-description">
+                    <span className="ability-name">Scratch</span>
                 </span>
-                <p class="ability-damage">10</p>
+                <p className="ability-damage">10</p>
             </section>
             {/* <section class="character-ability">
                 <span class="ability-cost">
@@ -54,15 +54,15 @@ function Card({card}) {
                 </span>
             </section> */}
 
-            <section class="character-description">
+            <section className="character-description">
                 <p>Obviously prefers hot places. If it gets caught in the rain, steam is said to sput from the tip of its tail.
                     LV.10 #4</p>
             </section>
 
-            <section class="card-details">
+            <section className="card-details">
                 {/* <p class="artist">LiLus. Mitsuhire Arita</p> */}
                 {/* <p class="company">&copy;1995, 96, 96</p> */}
-                <p class="collector-card-number">46/120</p>
+                <p className="collector-card-number">46/120</p>
             </section>
 		</main>
 

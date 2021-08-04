@@ -1,0 +1,21 @@
+.my-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-list-username {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.delete-card-button {
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.user-card-container {
+    margin-left: 30px;
+}
