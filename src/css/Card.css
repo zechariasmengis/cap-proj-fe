@@ -1,17 +1,8 @@
-@charset "UTF-8";
-/* * {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-} */
-
-/* html, body {
-  height: 100%;
-} */
 
 .pokemon-card {
   display: grid;
+  transform-style: preserve-3d;
+  transition: 250ms;
   width: 223px;
   /* min-width: 450px; */
   height: 336px;
@@ -25,6 +16,29 @@
   /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  transform:rotateY(var(--rotate-y, 0));
+  opacity: 1;
+}
+
+.pokemon-card.flip {
+  --rotate-y: 180deg;
+}
+
+.pokemon-card .front,
+.pokemon-card .back {
+  position: absolute;
+  /* backface-visibility: hidden; */
+}
+
+.pokemon-card .back {
+  transform: rotateY(180deg);
+  color: red;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(..//assets/brand/holologo.png);
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
 }
 
 .title-row {
@@ -78,7 +92,7 @@
 .character-img {
   margin: 0 10px 0 10px;
   height: 135px;
-  border: 5px solid yellow;
+  border: 5px solid #e7c30d;
   overflow: hidden;
 }
 
@@ -91,7 +105,7 @@
 }
 
 .character-meta {
-  background-color: yellow;
+  background-color: #e7c30d;
   height: 25px;
   margin: 0 40px;
   display: -ms-grid;
@@ -155,32 +169,11 @@
   font-size: 20px;
 }
 
-/* .character-stats {
-  height: 45px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-
-.character-stats .character-stat {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -ms-grid-rows: 20px 25px;
-      grid-template-rows: 20px 25px;
-}
-
-.character-stats .character-stat p {
-  font-size: 12px;
-  font-weight: bold;
-} */
-
 .character-description {
   height: 50px;
   width: 200px;
   margin: 0 10px 0 10px;
-  border: 2px solid yellow;
+  border: 2px solid #e7c30d;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -207,14 +200,6 @@
   margin: 0 5px;
 }
 
-.card-details .artist {
-  font-weight: bold;
-}
-
-.card-details .company {
-  text-align: center;
-}
-
 .card-details .collector-card-number {
   font-weight: bold;
   text-align: right;
@@ -236,3 +221,9 @@
 .element-icon {
   height: 100%;
 }
+
+.collector-card-number {
+  margin-top: 28px;
+}
+
+

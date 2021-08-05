@@ -24,53 +24,55 @@ function SignUpForm() {
     };
 
     return (
-     <div className="card">
-        <div className="card-content">
-          <div className="card-title">
-            <h2>SIGNUP</h2>
-            <div className="underline-title"></div>
-          </div>
-          <form method="post" className="form" onSubmit={handleSubmit}>
-    {/* ////////// EMAIL /////////// */}
-                <label for="email">
-                    Email
-                </label>
-                <input
-                    className='form-content'
-                    type='email' 
-                    name='email'
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                />
-                <div className="form-border"></div>
-    {/* ////////// USERNAME /////////// */}
-                <label for="username">
-                    Username
-                </label>
-                <input 
-                    className='form-content'
-                    type='text' 
-                    name='username'
-                    value={username}
-                    onChange={(event) => setUsername(event.target.value)}
-                />
-                <div className="form-border"></div>
-    {/* ////////// PASSWORD /////////// */}
-                <label for="password">Password
-                </label>
-                <input 
-                    className='form-content'
-                    type='password' 
-                    name='password'
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                />
-                <div className="form-border"></div>
+        <div className="main-container">
+            <div className="card">
+                <div className="card-content">
+                <div className="card-title">
+                    <h2>SIGNUP</h2>
+                    <div className="underline-title"></div>
+                </div>
+                <form method="post" className="form" onSubmit={handleSubmit}>
+            {/* ////////// EMAIL /////////// */}
+                        <label for="email">
+                            Email
+                        </label>
+                        <input
+                            className='form-content'
+                            type='email' 
+                            name='email'
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
+                        />
+                        <div className="form-border"></div>
+            {/* ////////// USERNAME /////////// */}
+                        <label for="username">
+                            Username
+                        </label>
+                        <input 
+                            className='form-content'
+                            type='text' 
+                            name='username'
+                            value={username}
+                            onChange={(event) => setUsername(event.target.value)}
+                        />
+                        <div className="form-border"></div>
+            {/* ////////// PASSWORD /////////// */}
+                        <label for="password">Password
+                        </label>
+                        <input 
+                            className='form-content'
+                            type='password' 
+                            name='password'
+                            value={password}
+                            onChange={(event) => setPassword(event.target.value)}
+                        />
+                        <div className="form-border"></div>
 
-            <input className="submit-btn" type="submit" name="submit" value="Create Account" />
-            <Link to="/login" className="signup"> Already have an account? Log-in.</Link>
-          </form>
-        </div>
+                    <input className="submit-btn" type="submit" name="submit" value="Create Account" />
+                    <Link to="/login" className="signup"> Already have an account? Log-in.</Link>
+                </form>
+                </div>
+            </div>
      </div>
     )
 }

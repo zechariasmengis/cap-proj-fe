@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import './css/reset.css';
 import SignUpForm from './components/SignUpForm';
 import LogInForm from './components/LogInForm';
 import Home from './components/Home';
@@ -11,8 +12,6 @@ import MyProfile from './components/MyProfile'
 import MyCardList from './components/MyCardList'
 
 function App() {
-
-  // state will need to hold: token(user), username, user_cards
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({username: '', user_cards: []});

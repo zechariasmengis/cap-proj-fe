@@ -1,8 +1,8 @@
-import '../css/Card.css'
+import '../css/UserCard.css'
 
 function UserCard({user_card}) {
     return(
-        <main className="pokemon-card">
+        <main className="pokemon-card hvr-grow">
             <section className="title-row">
                 {/* <p className="rarity">Basic</p> */}
                 <h1 className="name">{user_card.card.name}</h1>

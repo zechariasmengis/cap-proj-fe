@@ -1,0 +1,213 @@
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .pokemon-card {
+    display: grid;
+    width: 223px;
+    /* min-width: 450px; */
+    height: 336px;
+    border-radius: 15px;
+    border: 15px solid #e7c30d;
+    overflow: hidden;
+    font-family: arial, sans-serif;
+    box-shadow: 10px 8px 12px 0px black;
+    position: relative;
+    background-color: #8EC5FC;
+    /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  }
+  
+  .title-row {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rarity rarity"
+   "name health";
+    -ms-grid-columns: auto 60px;
+        grid-template-columns: auto 60px;
+    -ms-grid-rows: 10px 25px;
+        grid-template-rows: 10px 25px;
+    margin: 0px 10px 0px 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* -webkit-column-gap: 5px;
+            column-gap: 5px; */
+  }
+  
+  .title-row .rarity {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: rarity;
+  }
+  
+  .title-row .name {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: name;
+    font-size: 16px;
+  }
+  
+  .title-row .health {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: health;
+    /* font-weight: bold; */
+    font-size: 15px;
+    text-align: right;
+    color: red;
+  }
+  
+  .title-row .type {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: type;
+    width: 100%;
+  }
+  
+  .character-img {
+    margin: 0 10px 0 10px;
+    height: 135px;
+    border: 5px solid #e7c30d;
+    overflow: hidden;
+  }
+  
+  .character-img img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .character-meta {
+    background-color: #e7c30d;
+    height: 25px;
+    margin: 0 40px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .character-meta p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .character-ability {
+    height: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 65px auto 65px;
+        grid-template-columns: 65px auto 65px;
+    gap: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    margin: 0 10px;
+    /* border-bottom: 2px solid black; */
+  }
+  
+  .character-ability .ability-cost img {
+    width: 30px;
+  }
+  
+  .character-ability .ability-description {
+    text-align: center;
+  }
+  
+  .character-ability .ability-description .ability-name {
+    font-weight: bold;
+    height: 16px;
+    float: left;
+  }
+  
+  .character-ability .ability-description p {
+    text-align: left;
+  }
+  
+  .character-ability .ability-description p:before {
+    content: '\00a0';
+  }
+  
+  .character-ability .ability-description p img {
+    height: 18px;
+    vertical-align: middle;
+  }
+  
+  .character-ability .ability-damage {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .character-description {
+    height: 50px;
+    width: 200px;
+    margin: 0 10px 0 10px;
+    border: 2px solid #e7c30d;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .character-description p {
+    font-style: italic;
+    font-size: 9px;
+    padding: 0 5px;
+  }
+  
+  .card-details {
+    height: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 95px auto 45px;
+        grid-template-columns: 95px auto 45px;
+    font-size: 9px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 5px;
+  }
+  
+  .card-details .collector-card-number {
+    font-weight: bold;
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .card-details .collector-card-number:after {
+    content: "⬤";
+    font-size: 9px;
+    line-height: 9px;
+    padding: 0 5px;
+  }
+  
+  .element-icon {
+    height: 100%;
+  }

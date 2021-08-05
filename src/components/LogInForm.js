@@ -31,40 +31,42 @@ function LogInForm(props) {
     };
 
     return (
-        <div className="card">
-            <div className="card-content">
-            <div className="card-title">
-                <h2>LOGIN</h2>
-                <div className="underline-title"></div>
-            </div>
-            <form method="post" className="form" onSubmit={handleSubmit}>
-        {/* ////////// USERNAME /////////// */}
-                <label for="username">
-                    Username
-                </label>
-                <input 
-                    className='form-content'
-                    type='text' 
-                    name='username'
-                    value={username}
-                    onChange={(event) => setUsername(event.target.value)}
-                />
-                <div className="form-border"></div>
-    {/* ////////// PASSWORD /////////// */}
-                <label for="password">Password
-                </label>
-                <input 
-                    className='form-content'
-                    type='password' 
-                    name='password'
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                />
-                <div className="form-border"></div>
+        <div className="main-container" >
+            <div className="card">
+                <div className="card-content">
+                <div className="card-title">
+                    <h2>LOGIN</h2>
+                    <div className="underline-title"></div>
+                </div>
+                <form method="post" className="form" onSubmit={handleSubmit}>
+            {/* ////////// USERNAME /////////// */}
+                    <label for="username">
+                        Username
+                    </label>
+                    <input 
+                        className='form-content'
+                        type='text' 
+                        name='username'
+                        value={username}
+                        onChange={(event) => setUsername(event.target.value)}
+                    />
+                    <div className="form-border"></div>
+        {/* ////////// PASSWORD /////////// */}
+                    <label for="password">Password
+                    </label>
+                    <input 
+                        className='form-content'
+                        type='password' 
+                        name='password'
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                    />
+                    <div className="form-border"></div>
 
-                <input className="submit-btn" type="submit" name="submit" value="Log In" />
-                <Link to="/signup" className="signup"> Create an account.</Link>
-            </form>
+                    <input className="submit-btn" type="submit" name="submit" value="Log In" />
+                    <Link to="/signup" className="signup"> Create an account.</Link>
+                </form>
+                </div>
             </div>
         </div>
     )
